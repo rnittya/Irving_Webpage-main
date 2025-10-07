@@ -1,0 +1,151 @@
+/* =========================
+   GLOBAL STYLES
+   ========================= */
+body {
+  font-family: 'Lexend', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+  background-color: #fdfdfd; /* keeps your original background */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #004d4d;
+}
+
+/* =========================
+   NAVBAR
+   ========================= */
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  background-color: teal;
+  padding: 1rem;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+/* Hover underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Active page */
+.navbar a.active {
+  font-weight: 700;
+  border-bottom: 2px solid white;
+}
+
+.landmark-header {
+  text-align: center;
+  padding: 30px 20px; /* smaller padding */
+  background-color: #f0fdfd; /* very subtle, almost white */
+}
+
+.landmark-header h1 {
+  font-size: 2rem; /* slightly smaller */
+  margin: 0; /* remove extra spacing */
+  color: #004d4d; /* dark teal for contrast */
+}
+
+/* =========================
+   CONTENT
+   ========================= */
+.content {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.landmark-images {
+  margin: 20px 0;
+}
+
+.landmark-image {
+  margin: 20px 0;
+}
+
+.landmark-image img {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  max-width: 100%;
+}
+
+.landmark-image img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.caption {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* =========================
+   BACK TO MAP BUTTON
+   ========================= */
+.back-button {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.back-button img {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.back-button img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+footer {
+  background-color: #f2f2f2;
+  padding: 15px 0;
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer a {
+  color: teal;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
